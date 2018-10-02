@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@drawable/card_dark">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:id="@+id/relLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_photo"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:civ_border_color="@color/black"
+                app:civ_border_width="0.5dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <com.pixplicity.fontview.FontAppCompatTextView
+                    android:id="@+id/username"
+                    style="@style/FontTextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="mitch.tabian"
+                    android:textColor="@color/white"
+                    android:textSize="14.5dp" />
+
+                <com.pixplicity.fontview.FontAppCompatTextView
+                    android:id="@+id/tvAddress"
+                    style="@style/FontTextViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="alamat"
+                    android:layout_marginTop="2dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="#caffffff"
+                    android:textSize="11dp" />
+
+            </LinearLayout>
+
+
+            <!--
+            <ImageView
+                android:id="@+id/ivEllipses"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/ic_ellipses" />
+                -->
+
+        </LinearLayout>
+
+
+        <tabian.com.instagramclone2.Utils.SquareImageView
+            android:id="@+id/post_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relLayout1"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/post_image"
+            android:layout_marginBottom="32dp"
+            android:layout_marginLeft="24dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/label_kategori"
+                android:orientation="horizontal">
+
+                <com.pixplicity.fontview.FontAppCompatTextView
+                    android:id="@+id/txtKategori"
+                    style="@style/FontTextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jalanan"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/relLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/post_image"
+            android:layout_marginLeft="12dp">
+
+            <RelativeLayout
+                android:id="@+id/heartLayout"
+                android:layout_width="60dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/image_heart_red"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/thumb_up"
+                    android:tint="#FFF"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/image_heart"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/thumb_up_outline"
+                    android:tint="#FFF"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/speech_bubble"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/heartLayout"
+                android:src="@drawable/tooltip_outline_plus"
+                android:tint="#FFF"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="24dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/label_white"
+                android:orientation="horizontal">
+
+                <com.pixplicity.fontview.FontAppCompatTextView
+                    android:id="@+id/txtStatus"
+                    style="@style/FontTextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Waiting"
+                    android:textColor="#c5ffffff"
+                    android:textSize="13dp"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relLayout2"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="-8dp"
+            android:padding="20dp">
+
+            <com.pixplicity.fontview.FontAppCompatTextView
+                android:id="@+id/image_likes"
+                style="@style/FontTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="2dp"
+                android:text="Liked by Mitch, Tom, Mohammed and 30 others"
+                android:textColor="@color/white"
+                android:textSize="12dp" />
+
+            <com.pixplicity.fontview.FontAppCompatTextView
+                android:id="@+id/image_caption"
+                style="@style/FontTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_likes"
+                android:layout_marginTop="15dp"
+                android:lineSpacingExtra="4dp"
+                android:text="mitch.tabian moutains #earthporn #mountains"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/image_comments_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_caption"
+                android:layout_marginTop="12dp"
+                android:text="View all 3 comments"
+                android:textColor="@color/grey"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/image_time_posted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_comments_link"
+                android:layout_marginTop="4dp"
+                android:text="3 DAYS AGO"
+                android:textColor="@color/grey"
+                android:textSize="12dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

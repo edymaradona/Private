@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_dark">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="8dp"
+                android:paddingRight="32dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/back_fab" />
+
+                    <com.joooonho.SelectableRoundedImageView
+                        android:id="@+id/iv_photoProfile"
+                        android:layout_width="125dp"
+                        android:layout_height="145dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/dummy"
+                        app:layout_anchorGravity="bottom"
+                        app:sriv_right_bottom_corner_radius="12dp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.pixplicity.fontview.FontAppCompatTextView
+                        android:id="@+id/display_name"
+                        style="@style/FontTextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:text="Helmi Ismail"
+                        android:textColor="#FFF"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp" />
+
+                    <com.pixplicity.fontview.FontAppCompatTextView
+                        android:id="@+id/username"
+                        style="@style/FontTextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity=""
+                        android:layout_marginLeft="16dp"
+                        android:text="ismail.xebia"
+                        android:textColor="#c3ffffff"
+                        android:textSize="13dp" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="-16dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="16dp">
+
+                        <ImageView
+                            android:layout_width="120dp"
+                            android:layout_height="85dp"
+                            android:layout_marginTop="-8dp"
+                            android:alpha="0.3"
+                            android:src="@drawable/back_btn" />
+
+                        <com.pixplicity.fontview.FontAppCompatTextView
+                            android:id="@+id/btn_editProfile"
+                            style="@style/FontTextViewStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="12dp"
+                            android:background="@drawable/bg_button"
+                            android:text="Edit Profile"
+                            android:textColor="#FFF"
+                            android:textSize="12.5dp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:scrollIndicators="none"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="28dp"
+                    android:layout_marginRight="32dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="6dp"
+                            app:cardElevation="3dp"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/round_post">
+
+                                <ImageView
+                                    android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginTop="-10dp"
+                                    android:src="@drawable/ic_post" />
+
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:paddingBottom="12dp"
+                                    android:paddingLeft="24dp"
+                                    android:paddingRight="24dp"
+                                    android:paddingTop="12dp">
+
+                                    <com.pixplicity.fontview.FontAppCompatTextView
+                                        style="@style/FontTextViewStyle"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginRight="12dp"
+                                        android:gravity="center"
+                                        android:text="0"
+                                        android:id="@+id/txtpost"
+                                        android:textAllCaps="true"
+                                        android:textColor="#FFF"
+                                        android:textSize="16dp"
+                                        android:textStyle="bold" />
+
+                                    <com.pixplicity.fontview.FontAppCompatTextView
+                                        style="@style/FontTextViewStyle"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="Post"
+                                        android:textAllCaps="true"
+                                        android:textColor="#FFF"
+                                        android:textSize="11dp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="6dp"
+                            app:cardElevation="3dp"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/round_waiting">
+
+                                <ImageView
+                                    android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginTop="-6dp"
+                                    android:src="@drawable/ic_waiting" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:paddingBottom="12dp"
+                                    android:paddingLeft="24dp"
+                                    android:paddingRight="24dp"
+                                    android:paddingTop="12dp">
+
+                                    <com.pixplicity.fontview.FontAppCompatTextView
+                                        style="@style/FontTextViewStyle"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginRight="12dp"
+                                        android:gravity="center"
+                                        android:text="0"
+                                        android:textAllCaps="true"
+                                        android:textColor="#FFF"
+                                        android:textSize="16dp"
+                                        android:textStyle="bold" />
+
+                                    <com.pixplicity.fontview.FontAppCompatTextView
+                                        style="@style/FontTextViewStyle"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="Waiting"
+                                        android:textAllCaps="true"
+                                        android:textColor="#FFF"
+                                        android:textSize="11dp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="6dp"
+                            app:cardElevation="3dp"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/round_proses">
+
+                                <ImageView
+                                    android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginTop="-8dp"
+                                    android:src="@drawable/ic_proses" />
+
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:paddingBottom="12dp"
+                                    android:paddingLeft="24dp"
+                                    android:paddingRight="24dp"
+                                    android:paddingTop="12dp">
+
+                                    <com.pixplicity.fontview.FontAppCompatTextView
+                                        style="@style/FontTextViewStyle"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginRight="12dp"
+                                        android:gravity="center"
+                                        android:text="0"
+                                        android:textAllCaps="true"
+                                        android:textColor="#FFF"
+                                        android:textSize="16dp"
+                                        android:textStyle="bold" />
+
+                                    <com.pixplicity.fontview.FontAppCompatTextView
+                                        style="@style/FontTextViewStyle"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="ON GOING"
+                                        android:textAllCaps="true"
+                                        android:textColor="#FFF"
+                                        android:textSize="11dp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="6dp"
+                            app:cardElevation="3dp"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/round_finish">
+
+                                <ImageView
+                                    android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginTop="-8dp"
+                                    android:src="@drawable/ic_finish" />
+
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:paddingBottom="12dp"
+                                    android:paddingLeft="24dp"
+                                    android:paddingRight="24dp"
+                                    android:paddingTop="12dp">
+
+                                    <com.pixplicity.fontview.FontAppCompatTextView
+                                        style="@style/FontTextViewStyle"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginRight="12dp"
+                                        android:gravity="center"
+                                        android:text="0"
+                                        android:textAllCaps="true"
+                                        android:textColor="#FFF"
+                                        android:textSize="16dp"
+                                        android:textStyle="bold" />
+
+                                    <com.pixplicity.fontview.FontAppCompatTextView
+                                        style="@style/FontTextViewStyle"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="FINISH"
+                                        android:textAllCaps="true"
+                                        android:textColor="#FFF"
+                                        android:textSize="11dp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                        <Space
+                            android:layout_width="48dp"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <com.pixplicity.fontview.FontAppCompatTextView
+                android:id="@+id/txtDes"
+                style="@style/FontTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginTop="16dp"
+                android:lineSpacingExtra="6dp"
+                android:text="Lorem Ipsummmmm"
+                android:textColor="#c3ffffff"
+                android:textSize="14dp" />
+
+            <com.pixplicity.fontview.FontAppCompatTextView
+                android:id="@+id/website"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginTop="8dp"
+                android:text="https://xebia.com"
+                android:textColor="@color/material_blue"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="32dp"
+                android:background="#2d4664" />
+
+            <RelativeLayout
+                android:id="@+id/relLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+
+                <GridView
+                    android:id="@+id/gridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:horizontalSpacing="1dp"
+                    android:numColumns="3"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="1dp">
+
+
+                </GridView>
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"></android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
+
+<ProgressBar
+android:layout_width="60dp"
+android:layout_height="60dp"
+android:layout_marginTop="32dp"
+android:layout_marginLeft="32dp"
+android:id="@+id/profileProgressBar"
+android:layout_centerInParent="true" />
+
+    </android.support.design.widget.CoordinatorLayout>

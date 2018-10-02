@@ -1,0 +1,366 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#313439"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_photo"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                app:civ_border_color="#58ffffff"
+                app:civ_border_width="2dp" />
+
+            <com.pixplicity.fontview.FontAppCompatTextView
+                android:id="@+id/changeProfilePhoto"
+                style="@style/FontTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profile_photo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"
+                android:text="Change Photo"
+                android:textColor="@color/link_blue"
+                android:textSize="16sp" />
+
+            <!-- username section -->
+
+            <LinearLayout
+                android:id="@+id/ll_basic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/changeProfilePhoto"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="50dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:tint="#FFF"
+                    android:src="@drawable/account_outline"/>
+
+                <com.pixplicity.fontview.FontAppCompatTextView
+                    style="@style/FontTextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="BASIC INFORMATION"
+                    android:textColor="#FFF"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/relLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_basic"
+                android:orientation="vertical"
+                android:paddingBottom="12dp"
+                android:paddingLeft="66dp"
+                android:layout_marginTop="15dp"
+                android:paddingRight="24dp"
+                android:paddingTop="16dp">
+
+                <com.pixplicity.fontview.FontAppCompatTextView
+                    style="@style/FontTextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="U S E R N A M E"
+                    android:textColor="#b5dcdcdc"
+                    android:textSize="11dp" />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:hint=""
+                    android:inputType="textNoSuggestions"
+                    android:textSize="16dp"
+                    app:met_hideUnderline="true"
+                    app:met_textColor="#FFF"
+                    app:met_textColorHint="@color/material_blue"
+                    app:met_typeface="fonts/Vollkorn-Semibold.ttf" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="4dp"
+                    android:background="#9e6c6c6c" />
+
+            </LinearLayout>
+
+
+            <!-- display_name section -->
+            <LinearLayout
+                android:id="@+id/relLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relLayout1"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                android:paddingBottom="12dp"
+                android:paddingLeft="66dp"
+                android:paddingRight="24dp"
+                android:paddingTop="12dp">
+
+                <com.pixplicity.fontview.FontAppCompatTextView
+                    style="@style/FontTextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="D I S P L A Y   N A M E"
+                    android:textColor="#b5dcdcdc"
+                    android:textSize="11dp" />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/display_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:hint=""
+                    android:inputType="textNoSuggestions"
+                    android:textSize="16dp"
+                    app:met_hideUnderline="true"
+                    app:met_textColor="#FFF"
+                    app:met_textColorHint="@color/material_blue"
+                    app:met_typeface="fonts/Vollkorn-Semibold.ttf" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="4dp"
+                    android:background="#9e6c6c6c" />
+
+            </LinearLayout>
+
+
+            <!-- website section -->
+            <LinearLayout
+                android:id="@+id/relLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relLayout2"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                android:paddingBottom="12dp"
+                android:paddingLeft="66dp"
+                android:paddingRight="24dp"
+                android:paddingTop="12dp">
+
+                <com.pixplicity.fontview.FontAppCompatTextView
+                    style="@style/FontTextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="W E B S I T E"
+                    android:textColor="#b5dcdcdc"
+                    android:textSize="11dp" />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/website"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:hint=""
+                    android:inputType="textNoSuggestions"
+                    android:textSize="16dp"
+                    app:met_hideUnderline="true"
+                    app:met_textColor="#FFF"
+                    app:met_textColorHint="@color/material_blue"
+                    app:met_typeface="fonts/Vollkorn-Semibold.ttf" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="4dp"
+                    android:background="#9e6c6c6c" />
+
+            </LinearLayout>
+
+
+            <!-- description section -->
+            <LinearLayout
+                android:id="@+id/relLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relLayout3"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                android:paddingBottom="12dp"
+                android:paddingLeft="66dp"
+                android:paddingRight="24dp"
+                android:paddingTop="12dp">
+
+                <com.pixplicity.fontview.FontAppCompatTextView
+                    style="@style/FontTextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="D E S C R I P T I O N"
+                    android:textColor="#b5dcdcdc"
+                    android:textSize="11dp" />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:hint=""
+                    android:inputType="textNoSuggestions"
+                    android:textSize="16dp"
+                    app:met_hideUnderline="true"
+                    app:met_textColor="#FFF"
+                    app:met_textColorHint="@color/material_blue"
+                    app:met_typeface="fonts/Vollkorn-Semibold.ttf" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="4dp"
+                    android:background="#9e6c6c6c" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_private"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relLayout4"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="32dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:tint="#FFF"
+                    android:src="@drawable/shield_key_outline"/>
+
+                <com.pixplicity.fontview.FontAppCompatTextView
+                    android:id="@+id/textPrivateInfo"
+                    style="@style/FontTextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PRIVATE INFORMATION"
+                    android:layout_gravity="center"
+                    android:textColor="#FFF"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+
+            <!-- email section -->
+            <LinearLayout
+                android:id="@+id/relLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_private"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                android:paddingBottom="12dp"
+                android:paddingLeft="66dp"
+                android:paddingRight="24dp"
+                android:paddingTop="16dp"
+                >
+
+                <com.pixplicity.fontview.FontAppCompatTextView
+                    style="@style/FontTextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="E M A I L"
+                    android:textColor="#b5dcdcdc"
+                    android:textSize="11dp" />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:hint=""
+                    android:inputType="textNoSuggestions"
+                    android:textSize="16dp"
+                    app:met_hideUnderline="true"
+                    app:met_textColor="#FFF"
+                    app:met_textColorHint="@color/material_blue"
+                    app:met_typeface="fonts/Vollkorn-Semibold.ttf" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="4dp"
+                    android:background="#9e6c6c6c" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/relLayout6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relLayout5"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                android:paddingBottom="12dp"
+                android:paddingLeft="66dp"
+                android:paddingRight="24dp"
+                android:paddingTop="12dp"
+                >
+
+                <com.pixplicity.fontview.FontAppCompatTextView
+                    style="@style/FontTextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="P H O N E   N U M B E R"
+                    android:textColor="#b5dcdcdc"
+                    android:textSize="11dp" />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/phoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:hint=""
+                    android:inputType="textNoSuggestions"
+                    android:textSize="16dp"
+                    app:met_hideUnderline="true"
+                    app:met_textColor="#FFF"
+                    app:met_textColorHint="@color/material_blue"
+                    app:met_typeface="fonts/Vollkorn-Semibold.ttf" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="#9e6c6c6c" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+</merge>

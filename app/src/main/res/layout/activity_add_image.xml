@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivBackArrow"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="36dp"
+                    android:layout_marginRight="8dp"
+                    android:padding="14dp"
+                    android:src="@drawable/ic_keyboard_backspace_black_24dp"
+                    android:tint="#999" />
+
+                <com.pixplicity.fontview.FontAppCompatTextView
+                    style="@style/FontTextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:lineSpacingExtra="2dp"
+                    android:text="REPORT"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    android:textStyle="bold|italic" />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardBackgroundColor="#FFF"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="0dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="40dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.pixplicity.fontview.FontAppCompatTextView
+                            style="@style/FontTextViewStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Unggah Foto"
+                            android:textColor="#404040"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="32dp"
+                            android:background="#ececec" />
+
+                    </LinearLayout>
+
+                    <com.pixplicity.fontview.FontAppCompatTextView
+                        style="@style/FontTextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Pastikan gambar yang akan kamu adukan"
+                        android:textColor="#8b8b8b"
+                        android:textSize="12sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/round_image"
+                        android:orientation="horizontal">
+
+                        <com.joooonho.SelectableRoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/imageShare"
+                            android:layout_width="match_parent"
+                            android:layout_height="145dp"
+                            android:scaleType="centerCrop"
+                            app:sriv_left_bottom_corner_radius="4dip"
+                            app:sriv_left_top_corner_radius="4dip"
+                            app:sriv_right_bottom_corner_radius="4dip"
+                            app:sriv_right_top_corner_radius="4dip" />
+
+                        <LinearLayout
+                            android:id="@+id/linearPhotoKtp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/round_circle"
+                            android:orientation="horizontal"
+                            android:padding="14dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ico_upload" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.pixplicity.fontview.FontAppCompatTextView
+                            style="@style/FontTextViewStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/kategori"
+                            android:textColor="#404040"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="32dp"
+                            android:background="#ececec" />
+
+                    </LinearLayout>
+
+                    <com.pixplicity.fontview.FontAppCompatTextView
+                        style="@style/FontTextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="Pilih salah satu kategori"
+                        android:textColor="#949494"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:id="@+id/btn_kategori"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/round_grey"
+                        android:clickable="true"
+                        android:orientation="horizontal"
+                        android:paddingBottom="16dp"
+                        android:paddingTop="15dp">
+
+                        <!--
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="8dp"
+                            android:src="@drawable/ico_handphone" />
+                            -->
+
+                        <com.pixplicity.fontview.FontAppCompatTextView
+                            android:id="@+id/tv_kategori"
+                            style="@style/FontTextViewStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal">
+
+                        <com.pixplicity.fontview.FontAppCompatTextView
+                            style="@style/FontTextViewStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pesan_aduan"
+                            android:textColor="#404040"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="32dp"
+                            android:background="#ececec" />
+
+                    </LinearLayout>
+
+                    <com.pixplicity.fontview.FontAppCompatTextView
+                        style="@style/FontTextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="Apa Fasilitas yang menjadi masalah ?"
+                        android:textColor="#949494"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/round_grey"
+                        android:orientation="horizontal">
+
+                        <!--
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="8dp"
+                            android:src="@drawable/ico_handphone" />
+                            -->
+
+                        <com.rengwuxian.materialedittext.MaterialEditText
+                            android:id="@+id/caption"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lineSpacingExtra="2dp"
+                            android:textSize="14sp"
+                            app:met_hideUnderline="true"
+                            app:met_typeface="fonts/SF-UI-Text-Regular.otf" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal">
+
+                        <com.pixplicity.fontview.FontAppCompatTextView
+                            style="@style/FontTextViewStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lokasi"
+                            android:textColor="#404040"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="32dp"
+                            android:background="#ececec" />
+
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:id="@+id/locationMarker"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <include
+                            layout="@layout/content_main"
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp" />
+
+                        <LinearLayout
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/ico_map"
+                            android:gravity="center"
+                            android:orientation="horizontal" />
+
+                        <LinearLayout
+                            android:id="@+id/linearLocation"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                        </LinearLayout>
+
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/round_grey"
+                        android:orientation="horizontal">
+
+                        <!--
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="8dp"
+                            android:src="@drawable/ico_handphone" />
+                            -->
+
+                        <com.rengwuxian.materialedittext.MaterialEditText
+                            android:id="@+id/lokasiText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Alamat Lokasi"
+                            android:textSize="14sp"
+                            app:met_hideUnderline="true"
+                            app:met_typeface="fonts/SF-UI-Text-Regular.otf" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="32dp"
+                        android:layout_marginTop="16dp"
+                        android:background="#ececec" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.pixplicity.fontview.FontAppCompatTextView
+                            style="@style/FontTextViewStyle"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:lineSpacingExtra="2.5dp"
+                            android:text="Pastikan data yang kamu adukan sudah benar"
+                            android:textColor="#999999"
+                            android:textSize="11dp" />
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:id="@+id/submit_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/round_gradient"
+                            android:orientation="horizontal">
+
+                            <com.pixplicity.fontview.FontAppCompatTextView
+                                style="@style/FontTextViewStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:lineSpacingExtra="2dp"
+                                android:text="SUBMIT"
+                                android:textColor="#1a949b"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
